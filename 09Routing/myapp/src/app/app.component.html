@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <hr>
+
+   <!-- If we use href page will be reloaded & if we use routerLink page will not reloaded -->
+   <!-- <a href="/">Home</a>&nbsp;&nbsp;
+   <a href="/user">User</a> -->
+
+    <!-- using without parameter -->
+   <!-- <a [routerLink]="['']"> Home </a>&nbsp;&nbsp; 
+   <a [routerLink]="['user', id.value]"> USer </a> -->
+
+   <!-- using parameter -->
+   <a [routerLink]="['']" [queryParams] = "{analytics: 500}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> Home </a>&nbsp;&nbsp; |
+   <input type="text" #id (input)="0" />
+   <a [routerLink]="['user', id.value]" routerLinkActive="active"> USer </a>
+  <hr>
+  <router-outlet></router-outlet>
+  </div>
+
+
