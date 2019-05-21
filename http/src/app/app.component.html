@@ -1,0 +1,23 @@
+
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <label for="username"> UserName</label>
+  <input type="text" id="username" #username/>
+  <label for="email"> Email</label>
+  <input for="email" id="email" #email />
+
+  <button (click)="onSubmit(username.value, email.value)"> Clickl Me</button>
+
+  <button (click)="onGetData()"> Get Data</button>
+
+  <ul>
+    <li *ngFor="let item of items"> {{item}}
+    </li>
+  </ul>
+
+  <hr>
+  <p>{{asyncString | async}}</p>
+
+
