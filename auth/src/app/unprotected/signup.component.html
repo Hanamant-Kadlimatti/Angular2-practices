@@ -1,0 +1,20 @@
+<h3> Please SignUp to fill all features</h3>
+
+<form [formGroup]="myGroup" (ngSubmit)="onSubmit()">
+  <div class="input-group">
+    <label for="email">E-mail</label>
+    <input formControlName="email" type="email" name="email" id="email" #email class="form-control"/>
+  </div>
+
+  <div class="input-group">
+    <label for="password"> Password</label>
+    <input formControlName="password" type="password" name="password" id="password" #password  class="form-control"/>
+  </div>
+
+  <div class="input-group">
+    <label for="confirmPassword"> Confirm Password</label>
+    <input formControlName="confirmPassword" type="confirmPassword" name="confirmPassword" id="confirmPassword" #confirmPassword  class="form-control"/>
+  </div>
+
+  <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Sign Up</button>
+</form>
